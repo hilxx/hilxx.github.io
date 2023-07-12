@@ -53,3 +53,66 @@ console.log(player["name"]);
 player.lastName = "potato"; //property 추가 가능
 player.points = player.points + 15;
 console.log(player);
+
+//challenge3
+function sayHello(nameOfPerson, age){ //()안()=인수)에 데이터 값 넣기
+    //sayHello를 실행할 때마다 나타남
+    // console.log("Hello! my name is A"); 
+    //argument(인수)는 function을 실행하는 동안 어떤 정보를 function에게 보낼 수 있는 방법
+    console.log("Hello my name is " + nameOfPerson + "and i am " + age);
+}
+
+//console.log("alalalal")에서 하는 방식과 동일하게 데이터를 보낼 수 있음
+sayHello("nico", 30); //A를 nico로 바꾸기
+sayHello("dal", 27);
+sayHello("lynn", 22);
+
+function plus(firstNumber, secondNumber) {
+    //function 괄호 안의 매개변수에서 argument를 받을 수 있다. (여러개 받을 수 있음)
+    console.log(firstNumber + secondNumber);
+}
+// console.log(firstNumber); => error / firstNumber는 function plus 안에서만 존재하기 때문
+function divide(a,b){
+    console.log(a/b);
+}
+plus(8, 60);
+divide(98, 20);
+
+const player2 = {
+    name: "hilxx",
+    sayHello: function(otherPersonsName){
+        console.log("hello! " + otherPersonsName + ", nice to meet you");
+    },
+};
+
+console.log(player2.name);
+player2.sayHello("lynn");
+
+//calculate 만들기
+const calculator = {
+    add: function (a, b) {
+        console.log(a+b);
+    },
+    minus: function(a, b){
+        console.log(a-b);
+    },
+    div: function(a, b){
+        console.log(a/b);
+    },
+    multi: function(a,b){
+        console.log(a*b);
+    },
+    power: function(a,b){
+        console.log(a**b);
+    },
+    last: function(a,b){
+        console.log(a%b);
+    },
+};
+
+calculator.add(5,1);
+calculator.minus(3,2);
+calculator.div(4,7);
+calculator.multi(5,2);
+calculator.power(2,8);
+calculator.last(90,4);
