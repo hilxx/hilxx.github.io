@@ -118,8 +118,12 @@ calculator.multi(5,2);
 calculator.power(2,8);
 calculator.last(90,4);
 
-//2.11다시 듣기(0714)
+//2.11다시 듣기(0714_result)
 const plusResult = calculator.add(5,1);
+const minusResult = calculator.minus(plusResult, 10);
+const divResult = calculator.div(10, minusResult);
+const multiResult = calculator.multi(divResult, plusResult);
+const powerResult = calculator.power(divResult, minusResult);
 
 const age = 96; //1
 function calculateKrAge(ageOfForeigner){
@@ -140,3 +144,11 @@ function calculateEnAge(ageOfNative){
 }
 const enAge = calculateEnAge(age);
 console.log(enAge);
+
+//#3.0 The Document Object
+
+const title = document.getElementById("title");
+// console.dir(title);
+title.innerText = "Got you!"
+console.log(title.id); //title 출력
+console.log(title.className); //비어있음 -> why? javascript로 추가했기 때문
