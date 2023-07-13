@@ -91,22 +91,23 @@ player2.sayHello("lynn");
 //calculate 만들기
 const calculator = {
     add: function (a, b) {
-        console.log(a+b);
+       return a+b;
     },
     minus: function(a, b){
-        console.log(a-b);
+        return a-b;
     },
     div: function(a, b){
-        console.log(a/b);
+        return a/b;
     },
     multi: function(a,b){
-        console.log(a*b);
+        return a*b;
     },
     power: function(a,b){
-        console.log(a**b);
+        return a**b;
     },
     last: function(a,b){
-        console.log(a%b);
+        return a%b;
+        //return으로 변경시 console에 아무것도 뜨지 않을 것
     },
 };
 
@@ -116,3 +117,26 @@ calculator.div(4,7);
 calculator.multi(5,2);
 calculator.power(2,8);
 calculator.last(90,4);
+
+//2.11다시 듣기(0714)
+const plusResult = calculator.add(5,1);
+
+const age = 96; //1
+function calculateKrAge(ageOfForeigner){
+    return ageOfForeigner + 2; //3. 96 + 2 = 98
+    //4. 98을 return함으로써, function을 호출하는 코드가 98이 됨.
+}
+//ageOfForeigner의 코드를 받고 싶음 => return
+const krAge = calculateKrAge(age); //2. age=96
+console.log(krAge);
+//console.log를 지양하는 이유: console에 무언가를 log하는 것이기 때문 => 우리가 원하는 것은 데이터를 받아서 사용하거나 콘솔이 아닌 화면에 결과를 출력하고 싶어함 == return 쓰기
+//return을 쓰는 이유: 함수를 통해 console.log 나 alert가 아니라 결과값을 받기 위해서
+//return이 function이 function밖과 소통하는 방법
+
+function calculateEnAge(ageOfNative){
+    ageOfNative - 2;
+    return "hello";
+    //이렇게 되면 출력되는 값은 hello 이다
+}
+const enAge = calculateEnAge(age);
+console.log(enAge);
