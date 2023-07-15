@@ -148,7 +148,7 @@ console.log(enAge);
 //#3.0 The Document Object
 
 const title = document.getElementById("title");
-// console.dir(title);
+// console.dir(title); //dir: object로 표시한 element를 보여줌
 // title.innerText = "Got you!"
 //console.log(title.id); //title 출력
 //console.log(title.className); //비어있음 -> why? javascript로 추가했기 때문
@@ -158,5 +158,32 @@ console.log(hellos);
 
 const title2 = document.querySelector(".hello>h1:first-child");
 console.log(title2);
-const title3 = document.querySelectorAll(".hello>h1");
-console.log(title3);
+// const title3 = document.querySelectorAll(".hello>h1");
+// console.log(title3);
+
+function handleTitleClick(){
+    console.log("title was clicked!");
+    title2.style.color = "skyblue";
+}
+
+function handleMouseEnter(){
+    console.log("mouse is here!");
+    title2.style.color = "pink";
+    title2.innerText = "Mouse is here!"
+}
+
+function handleMouseLeave(){
+    title2.style.color = "purple";
+    title2.innerText = "Mouse is gone!"
+}
+
+title2.addEventListener("click", handleTitleClick);
+title2.addEventListener("mouseenter",handleMouseEnter);
+title2.addEventListener("mouseout", handleMouseLeave);
+/* evet종류 구글링 하는 법 
+1. 구글에 찾고 싶은 element 이름(h1, p 등등)
+2. html element
+3. mdn (Mozilla Developer Network) 검색
+===> h1 html element mdn 
+4. HTMLHealingElement - Web APIs | MDN 클릭
+5. console.dir에서 웹에서 찾은 거 찾고 on빼고 event 추가해보기*/
