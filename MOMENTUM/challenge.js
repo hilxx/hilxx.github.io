@@ -149,6 +149,14 @@ console.log(enAge);
 
 const title = document.getElementById("title");
 // console.dir(title);
-title.innerText = "Got you!"
-console.log(title.id); //title 출력
-console.log(title.className); //비어있음 -> why? javascript로 추가했기 때문
+// title.innerText = "Got you!"
+//console.log(title.id); //title 출력
+//console.log(title.className); //비어있음 -> why? javascript로 추가했기 때문
+
+const hellos = document.getElementsByClassName("hello");
+console.log(hellos);
+
+const title2 = document.querySelector(".hello>h1:first-child");
+console.log(title2);
+const title3 = document.querySelectorAll(".hello>h1");
+console.log(title3);
