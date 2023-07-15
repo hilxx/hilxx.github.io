@@ -177,9 +177,31 @@ function handleMouseLeave(){
     title2.innerText = "Mouse is gone!"
 }
 
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+
+function handleWindowCopy(){
+    alert("copier!");
+}
+
+function handleWindowOffline(){
+    alert("SOS no WIFI!");
+}
+
+function handleWindowOnline(){
+    alert("ALL COOL!!");
+}
+
 title2.addEventListener("click", handleTitleClick);
 title2.addEventListener("mouseenter",handleMouseEnter);
 title2.addEventListener("mouseout", handleMouseLeave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
 /* evet종류 구글링 하는 법 
 1. 구글에 찾고 싶은 element 이름(h1, p 등등)
 2. html element
