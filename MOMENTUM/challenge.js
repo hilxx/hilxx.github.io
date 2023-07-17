@@ -163,7 +163,20 @@ console.log(title2);
 
 function handleTitleClick(){
     console.log("title was clicked!");
-    title2.style.color = "skyblue";
+
+    const currentColor = title2.style.color;
+    let newColor;
+    if(currentColor === "skyblue"){
+        newColor = "tomato";
+    } else{
+        newColor = "skyblue";
+    }
+    title2.style.color = newColor;
+    // if(title2.style.color === "skyblue"){
+    //     title2.style.color = "tomato";
+    // } else{
+    //     title2.style.color = "skyblue";
+    // }
 }
 
 function handleMouseEnter(){
@@ -194,14 +207,14 @@ function handleWindowOnline(){
 }
 
 title2.addEventListener("click", handleTitleClick);
-title2.addEventListener("mouseenter",handleMouseEnter);
-title2.addEventListener("mouseout", handleMouseLeave);
+// title2.addEventListener("mouseenter",handleMouseEnter);
+// title2.addEventListener("mouseout", handleMouseLeave);
 
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
+// window.addEventListener("resize", handleWindowResize);
+// window.addEventListener("copy", handleWindowCopy);
 
-window.addEventListener("offline", handleWindowOffline);
-window.addEventListener("online", handleWindowOnline);
+// window.addEventListener("offline", handleWindowOffline);
+// window.addEventListener("online", handleWindowOnline);
 /* evet종류 구글링 하는 법 
 1. 구글에 찾고 싶은 element 이름(h1, p 등등)
 2. html element
