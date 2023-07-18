@@ -1,21 +1,24 @@
-//#3.7부터 css도 적용하므로 challenge2로 링크 걸기
-const h1 = document.querySelector("div.hello:first-child h1");
+const loginForm = document.querySelector("#login-form");
+// const loginForm = document.getElementById("login-form");
+const loginInput = document.querySelector("#login-form input");
+// const loginButton = document.querySelector("#login-form button");
 
-function handleTitleClick(){
-    const clickedClass = "clicked";
-    // 1. h1.className = "active";
-    // 2. if(h1.className === clickedClass){}
-    // 3. if(h1.className.contain(clickedClass) === clickedClass) {
-    //     2,3.// h1.className = "";
-    //     4. h1.classList.remove(clickedClass);
-    // } else{
-    //     2,3.// h1.className = clickedClass;
-    //     4. h1.classList.add(clickedClass);
+function onLoinSubmit(tomato){
+    tomato.preventDefault();
+    // console.log("hello" ,loginInput.value);
+    // console.log("click!!!");
+
+    const username = loginInput.value;
+    console.log(username);
+    // if(username === ""){
+    //     alert("Please write your name");
+    // } else if(username.length >15){
+    //     alert("Your name is too long.");
     // }
-    // console.log(h1.className);
-
-    //5. h1.classList.toggle(clickedClass);
-    h1.classList.toggle("clicked");
+    // => html에서 required maxlength="15" 이렇게 쓸 수 있음
 }
 
-h1.addEventListener("click", handleTitleClick);
+loginForm.addEventListener("submit", onLoinSubmit);
+// tomato.preventDefault(); 이걸로 submit되지 않음
+
+// onLoinSubmit({information})
