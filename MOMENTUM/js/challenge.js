@@ -206,7 +206,7 @@ function handleWindowOnline(){
     alert("ALL COOL!!");
 }
 
-title2.addEventListener("click", handleTitleClick);
+//title2.addEventListener("click", handleTitleClick);
 // title2.addEventListener("mouseenter",handleMouseEnter);
 // title2.addEventListener("mouseout", handleMouseLeave);
 
@@ -243,4 +243,4 @@ function handleTitleClick(){
     h1.classList.toggle("clicked");
 }
 
-h1.addEventListener("click", handleTitleClick);
+//h1.addEventListener("click", handleTitleClick);

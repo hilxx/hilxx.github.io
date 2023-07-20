@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="./style2.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/style2.css">
     <title>Momentum App</title> 
     <!-- javascript와 html은 documnet를 보면 자동적으로 연결되어 있다는 것을 알 수 있음 -->
 </head>
@@ -29,6 +29,19 @@
         <!-- <button>Log In</button> -->
         <input type="submit" value="Log In">
     </form>
-    <script src="challenge2.js"></script>
+    <h2 class="clock">00:00:00</h2>
+    <h1 class="hidden" id="greeting"></h1>
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+    <!-- <img src="./images/bg01.jpg" alt="rnd img"> js로 추가시킬 것 -->
+    <div id="bg-color">
+        <button id="changeBtn">Give me color!</button>
+    </div>
+    <script src="./js/background.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/challenge2.js"></script>
+    <script src="./js/challenge.js"></script>
 </body>
 </html>
